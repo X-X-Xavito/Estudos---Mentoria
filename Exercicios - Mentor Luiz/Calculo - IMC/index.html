@@ -2,35 +2,33 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Mentoria - IMC</title>
-	</head>
+		<title>Calcule o seu IMC</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>	
 	<body>
+
+	</body>
 		<header>
-				<h1 class="titulo-principal">Calcule o seu IMC!</h1>
+			<div class="cabecalho">
+				<h1>Calcule o seu IMC!</h1>
 		</header>
 		<main>
-			<div class="container">
-				<p>O Índice de massa corpórea é calculado através da fórmula: Peso / Altura²</p>
-				<p>Nome:</p><input type="text" id="nome">
-				<p>Peso:</p><input type="text" id="peso">
-				<p >Altura:</p><input type="text" id="altura">
-				<input type="submit" onClick="return eventoBotao()">
-				</br>
-				<div id="imc"></div>
-			</div>
+			<section class="container principal">
+				<p>Preencha os seus dados e clique em "Kalkular!" e descubra o valor do seu IMC e qual categoria você se encaixa.</br>O IMC - índice de Massa Corpórea é calculado através da fórmula: Peso/(Altura)²</p>
+			</section>
+			<section class="campos">
+				<p>Nome: </p>
+				<input class="campos nome" type="text" placeholder="insira o seu nome">
+				<p>Peso: </p>
+				<input class="campos peso" type="text" placeholder="insira o seu peso em kg">
+				<p>Altura: </p>
+				<input class="campos altura" type="text" placeholder="insira a sua altura em cm">
+				<button class="kalkularIMC">Kalkular!</button>
+			</section>
 		</main>
-		<script>
-			function eventoBotao(){
-				var nome = document.getElementById("nome").value;
-				var peso = document.getElementById("peso").value;
-				var altura = document.getElementById("altura").value;
-				var imc = document.getElementById("imc");
 
-				var calculoImc = parseFloat(peso) / (parseFloat(altura) * parseFloat(altura));
-								
-				imc.innerHTML = "O imc de " + nome + " é " + calculoImc.toFixed(2);
-			}
 
-		</script>			
-	</body>
+
 </html>
+
