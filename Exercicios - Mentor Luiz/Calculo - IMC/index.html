@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Calcule o seu IMC</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
+
 	</head>	
 	<body>
 
@@ -21,12 +21,13 @@
 				<p>Nome: </p>
 				<input class="campos nome" type="text" placeholder="insira o seu nome">
 				<p>Peso: </p>
-				<input class="campos peso" type="text" placeholder="insira o seu peso em kg">
+				<input id="peso" class="campos peso" type="text" placeholder="insira o seu peso em kg">
 				<p>Altura: </p>
-				<input class="campos altura" type="text" placeholder="insira a sua altura em cm">
-				<button class="kalkularIMC">Kalkular!</button>
+				<input id="altura" class="campos altura" type="text" placeholder="insira a sua altura em cm">
+				<input type="button" onClick="calculaIMC()" class="kalkularIMC" id="botaoKalkular">
 			</section>
 		</main>
+		<script src="js/calculoIMC.js"></script>
 
 
 
