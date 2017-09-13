@@ -1,13 +1,16 @@
-  	var selecionaPeso = document.querySelector(".peso");
-  	var peso = selecionaPeso.textContent;
+		
+			function calculaIMC(){
 
- 	var selecionaAltura = document.querySelector(".altura");
- 	var altura = selecionaAltura.textContent;
+				var selecionaNome = document.getElementById("nome");
+				var nome = selecionaNome.value;
 
- function calculaIMC(peso, altura){
- 	var imc = 0;
+			  	var selecionaPeso = document.getElementById("peso");
+			  	var peso = selecionaPeso.value;
 
- 	imc = peso / (altura*altura);
+			 	var selecionaAltura = document.getElementById("altura");
+			 	var altura = selecionaAltura.value;
 
- 	return imc;
- }
+			 	var imc = peso / (altura * altura);
+
+				document.getElementById("resultadoIMC").innerHTML = (nome + ", o seu IMC é: " + imc);
+			}
